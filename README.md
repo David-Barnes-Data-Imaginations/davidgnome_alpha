@@ -171,19 +171,3 @@
 ### Thats it! I've hardly tested it, the code and documentation are poorly laid out, but its fun. 
 ### The main point is that it acts as a scaffold for a much bigger project
 
-	-
-- Step 9: Deepseek-Qwen-Distil
-- note: If you can run it, I highly advise getting whatever quantization you can of `deepseek-ai_DeepSeek-R1-0528-Qwen3`.
-  For GPU with 8GB VRAM or more, I go with a 'Q_8' from Bartowski on LMSTUDIO.
-  If you're really pushed for GPU space, or running on CPU, you might be able to run the unsloth `Q4_K_M` here (the quants are on the right):
-  https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF
-  Again with the alias (and Modelfile etc):
-  ```
-      alias dgnomeup='ollama run deepseekup'
-      alias dgnomedown='ollama deepseekdown'
-  ```
-- I normally don't drop below that, but this model is so good its worth even running `Q2_K_L` for fun. Bear in mind the recent SLM's tend to be thinking models, so if you're not viewing the models output in the one you ran `deepseekup`in, you won't see the thinking and it might seem like there's a slight delay in the answers.
-  The new Gemma 3 models are really good too.
--
-- ```
--
