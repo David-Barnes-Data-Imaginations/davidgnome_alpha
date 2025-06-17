@@ -7,7 +7,7 @@
 <img src='./src/GnomeGPT3_5.png'>
 <br>
 <br>
-<img src='./src/dgnome1.png'>
+<img src='./src/caution.png'>
 <br>
 
 # Disclaimer
