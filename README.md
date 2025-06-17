@@ -124,6 +124,7 @@ ollama run linux_gnome
       pages into your chosen LLM.
     - Access your system spec send in each prompt.
     - Run commands from the terminal ONLY if you select them.
+    - Access your terminsal history (this and system info are sent as part of the prompt, so disable if that isn't something you want.
     - Provide warnings and checks if the prompt response IF the commands fall under the ones I could arbitrarily remember should be used with caution. NOT everything is covered here.
     - Send your data to online models (don't put in an API key for any of the online ones if you don't want this)
     - Send your data to a local LLM, therefore not leaving your PC.
@@ -159,6 +160,7 @@ ollama run linux_gnome
 <img src='./src/dgnome2.png'>
 <br>
 - davidgnome will provide an explanation, then offer the options for the command. Results may vary dependant on the model. You may also have to play around with the system prompt for small models.
+- I have tested a much longer prompt template with the small models, and strangely enough they performed far worse with a longer prompt template. This may well be due to the system info and terminal history pushing the context windows limits.
 - If the code is flagged as potentially having risk, or if it is not on the list of risky commands (that I could remember offhand, with little thought), it will be flagged and you need to press 'Y' for 'Yes', or 'N' for 'No'.
 <br>
 <img src='./src/caution.png'>
