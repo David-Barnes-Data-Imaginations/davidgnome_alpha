@@ -1,6 +1,8 @@
 ### 10-15 MINUTES
-- # Your very own 'AI Driven-Terminal in Minutes!
-- ## Works on any Distro, even WSL2 (i think)
+<h2 align='center'> Your own 'AI Driven Terminal Helper' in Minutes :computer:
+
+<h3 align='center'> Works on any Distro, even WSL2 
+<br>
 <br>
 <img src='./src/GnomeGPT3_5.png'>
 <br>
@@ -14,7 +16,7 @@
   losing.
   Using it with small models for anything other than testing, is highly inadvisable. Using it with online models is less risky, but you do so at your own.
 - Bear in mind that I created this in 4-6 hours by vibecoding, rotating between Claure 4, GPT4o and Gemini 2.5 
-  in my PyCharm IDE, switching one out when it couldn't fix a problem, and making them write their own backend files.#
+  in my PyCharm IDE, switching one out when it couldn't fix a problem, and making them write their own backend files.
 - During this time I was studying Hugging Face Courses on one PC, tuning a model on yet another, cooking and 
   eating food, making coffee.. you get the idea. Don't use this for anything serious.
 - I spent so little time on this (about 1 hour to test) because i'm working on a far superior beta using multiple 
