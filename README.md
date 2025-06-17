@@ -1,9 +1,13 @@
 ### 10-15 MINUTES
 - # Your very own 'AI Driven-Terminal in Minutes!
 - ## Works on any Distro, even WSL2 (i think)
-- [An Example using GPT 3.5](images/GPT3_5.png)
-- [An Example using Ollama & SLM](images/ollama_1.png)
-  
+<br>
+<img src='./src/GnomeGPT3_5.png'>
+<br>
+<br>
+<img src='./src/dgnome1.png'>
+<br>
+
 - # Disclaimer
 - I made this project for my own use, and to demonstrate that you don't need to pay $18 a month for an AI driven terminal, no matter how much they spend on advertising.
 - I've been using it solely on my sandbox NVME, separated from the rest of my network, on a drive that I don't mind 
@@ -94,7 +98,9 @@
 - >The terminal will turn into model chat, but you can just leave that terminal then we'll use it in any other terminal we create.
   However if you'd like to chat with the model, then go ahead!
 - Step 7: Open another terminal, then go ahead and ask davidgnome a question. The format is: `davidgnome "my question here in double quotes"`
-- [davidgnome_onshot1_2.png](https://1drv.ms/i/s!AhxmXhMPujpN57oUB8K1V_DuQ9H_uQ?e=vOFemK)
+<br>
+<img src='./src/input.png'>
+<br>
 - # USE WITH CAUTION AND AT YOUR DISTRO'S OWN PERIL
 -
 - ### Optional Steps (but advised)
@@ -144,16 +150,26 @@
 - ### Online Models
 - As mentioned, online models will pretty much give the correct answers in the same way as using them in the way 
   you normally would. This is GPT 3.5
+<br>
+<img src='./src/GnomeGPT3_5'>
+<br>
 - Small Models through Ollama are a bit of a lottery. 
 - Its usueful to have a tiny helper for simple queries, but I wouldn't run anything with `sudo` below 30B personally.
- [Tiny Model Doing its best in Ollama](images/ollama_2.png)
+<br>
+<img src='./src/dgnome2.png'>
+<br>
 - davidgnome will provide an explanation, then offer the options for the command. Results may vary dependant on the model. You may also have to play around with the system prompt for small models.
 - If the code is flagged as potentially having risk, or if it is not on the list of risky commands (that I could remember offhand, with little thought), it will be flagged and you need to press 'Y' for 'Yes', or 'N' for 'No'.
- [Beware!](images/caution.pnga)
+<br>
+<img src='./src/caution.png'>
+<br>
 - You'll also have to type your password in for sudo obviously.
-[Password Check](images/password.png)
+<br>
+<img src='./src/password.png'>
+<br>
 
-##  Thats it! I've hardly tested it, the code and documentation are poorly laid out, but its fun.
+### Thats it! I've hardly tested it, the code and documentation are poorly laid out, but its fun. 
+### The main point is that it acts as a scaffold for a much bigger project
 
 	-
 - Step 9: Deepseek-Qwen-Distil
