@@ -38,13 +38,15 @@
     /usr/local/bin/davidgnome            # CLI entrypoint
     ~/davidgnome/                        # Main Python logic
         ├── __init__.py
-        ├── config.py                    # Reads/writes backend config
+        ├── config.py                   # Reads/writes backend config
+        ├── config.json                 # Stores backend config
         ├── gpt_backend.py              # Calls OpenAI
         ├── ollama_backend.py           # Calls Ollama
         ├── claude_backend.py           # Calls 
         ├── gemini_backend.py           # Calls gemini
-        ├── utils.py                    # Shared: get_system_info(), terminal_history()
+        ├── utils.py                    
         └── main.py                     # Core logic + gum usage
+    
     
     ```
     if you place yours somewhere else, be sure to change this line in the bash script 
