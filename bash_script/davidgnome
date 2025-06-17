@@ -1,0 +1,14 @@
+#!/bin/bash
+case "$1" in
+  set)
+    if [[ "$2" == "gpt" || "$2" == "claude" || "$2" == "ollama" || "$2" == "gemini" ]]; then
+       python3 ~/davidgnome/config.py "$2"
+      echo "Set backend to $2"
+    else
+      echo "Usage: davidgnome set [gpt|claude|ollama|gemini]"
+    fi
+    ;;
+  *)
+    python3 ~/davidgnome/main.py "$@"
+    ;;
+esac
