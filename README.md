@@ -1,7 +1,7 @@
 ### 10-15 MINUTES
 <h2 align='center'> Your own 'AI Driven Terminal Helper' in Minutes :computer:
 
-<h3 align='center'> Works on any Distro, even WSL2 
+<h3 align='center'> Works on any Distro, even WSL2 and MACOS (with some adjustments)
 <br>
 <br>
 <img src='./src/GnomeGPT3_5.png'>
