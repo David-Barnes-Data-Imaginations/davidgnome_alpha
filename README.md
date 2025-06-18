@@ -102,7 +102,7 @@ Grab either one of those from Hugging Face, LMStudio, or wherever you get your m
         ├── utils.py                    
         └── main.py                     # Core logic + gum usage
 
-- if you place yours somewhere else, be sure to change this line in the bash script 
+- I placed mine in my home directory, if you place yours somewhere else, be sure to change this line in the bash script 
 ````
     python3 ~/davidgnome/main.py "$@"
 ````
