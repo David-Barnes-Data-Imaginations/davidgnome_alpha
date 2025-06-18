@@ -1,4 +1,3 @@
-### 10-15 MINUTES
 <h2 align='center'> Your own 'AI Driven Terminal Helper' in Minutes :computer:
 
 <h3 align='center'> Works on any Distro, even WSL2 and MACOS (with some adjustments)
@@ -70,6 +69,7 @@ Grab either one of those from Hugging Face, LMStudio, or wherever you get your m
 - Small Models through Ollama are a bit of a lottery. 
 - Its usueful to have a tiny helper for simple queries, but I wouldn't run anything with `sudo` below 30B personally.
 <br>
+<br>
 <img src='./src/dgnome2.png'>
 <br>
 
@@ -83,7 +83,9 @@ Grab either one of those from Hugging Face, LMStudio, or wherever you get your m
 <br>
 <img src='./src/password.png'>
 <br>
-  - ## Installation Steps
+  ## Installation Steps
+  ### 10-15 MINUTES
+
   - Step 1: Download the project files and place them somewhere sensible, for example I put mine as follows:
     
   ```
