@@ -63,8 +63,9 @@ Grab either one of those from Hugging Face, LMStudio, or wherever you get your m
 - ### Online Models
 - As mentioned, online models will pretty much give the correct answers in the same way as using them in the way 
   you normally would. This is GPT 3.5
+  
 <br>
-<img src='./src/GnomeGPT3_5'>
+<img src='./src/GnomeGPT3_5.png'>
 <br>
 - Small Models through Ollama are a bit of a lottery. 
 - Its usueful to have a tiny helper for simple queries, but I wouldn't run anything with `sudo` below 30B personally.
