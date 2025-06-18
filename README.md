@@ -29,6 +29,59 @@ The [Brew](*"https://docs.brew.sh/Homebrew-on-Linux"*) package manager, in order
 Use whichever you wish, just put your API_Key variable in the relevant backend.
   - > I'm using my own model in this example, which I won't post yet as its work in progress. Its currently a Linux tuned Gemma model, but i'm going to try a Qwen also. If you'd like to test with a local model, I'd advise a `code`model such as a larger Qwen.
 Grab either one of those from Hugging Face, LMStudio, or wherever you get your models
+
+- ## What it can, and can't do
+- ### davidgnome CAN:
+	- Access your terminal history to send in each prompt. These keep the model informed so you don't have to paste 
+      pages into your chosen LLM.
+    - Access your system spec send in each prompt.
+    - Run commands from the terminal ONLY if you select them.
+    - Access your terminsal history (this and system info are sent as part of the prompt, so disable if that isn't something you want.
+    - Provide warnings and checks if the prompt response IF the commands fall under the ones I could arbitrarily remember should be used with caution. NOT everything is covered here.
+    - Send your data to online models (don't put in an API key for any of the online ones if you don't want this)
+    - Send your data to a local LLM, therefore not leaving your PC.
+- ### davidgnome CAN'T:
+	- Access any files on your PC, without you specifically asking it to.
+	- Run any checks and balances on its output other than those which the providers or creators have put in place.
+- > If you haven't already created an environment variable for your chosen LLM, do so now in your os / the relevant `_backend.py`
+  Example: I use GPT when not in an IDE, so where I have the below in GPT_backend.py:
+  ```
+  # Read the key from the environment
+  API_KEY: str | None = os.getenv("OPENAI_API_KEY")
+  ```
+- Now that's over with, lets get to it.
+- ## Usage:
+- Once you've installed the files via the README, open any terminal.
+- Set the API by choosing between `ollama`, `claude`, `gpt`, `gemini`:
+  ```
+  davidgnome set ollama
+  ```
+- To use davidgnome, we simply type `davidgnome "I have a question about Linux which I will remember to put in double quotes"`
+- press `enter`
+- Here's examples:
+
+- ### Online Models
+- As mentioned, online models will pretty much give the correct answers in the same way as using them in the way 
+  you normally would. This is GPT 3.5
+<br>
+<img src='./src/GnomeGPT3_5'>
+<br>
+- Small Models through Ollama are a bit of a lottery. 
+- Its usueful to have a tiny helper for simple queries, but I wouldn't run anything with `sudo` below 30B personally.
+<br>
+<img src='./src/dgnome2.png'>
+<br>
+
+- davidgnome will provide an explanation, then offer the options for the command. Results may vary dependant on the model. You may also have to play around with the system prompt for small models.
+- I have tested a much longer prompt template with the small models, and strangely enough they performed far worse with a longer prompt template. This may well be due to the system info and terminal history pushing the context windows limits.
+- If the code is flagged as potentially having risk, or if it is not on the list of risky commands (that I could remember offhand, with little thought), it will be flagged and you need to press 'Y' for 'Yes', or 'N' for 'No'.
+<br>
+<img src='./src/caution.png'>
+<br>
+- You'll also have to type your password in for sudo obviously.
+<br>
+<img src='./src/password.png'>
+<br>
   - ## Installation Steps
   - Step 1: Download the project files and place them somewhere sensible, for example I put mine as follows:
     
@@ -117,58 +170,6 @@ ollama run linux_gnome
 	  ```
    Now you can refresh, load or unload the model in ollama using `davidgnomeup`and `davidgnomedown`
 
-- # How davidgnome works
-- ## What it can, and can't do
-- ### davidgnome CAN:
-	- Access your terminal history to send in each prompt. These keep the model informed so you don't have to paste 
-      pages into your chosen LLM.
-    - Access your system spec send in each prompt.
-    - Run commands from the terminal ONLY if you select them.
-    - Access your terminsal history (this and system info are sent as part of the prompt, so disable if that isn't something you want.
-    - Provide warnings and checks if the prompt response IF the commands fall under the ones I could arbitrarily remember should be used with caution. NOT everything is covered here.
-    - Send your data to online models (don't put in an API key for any of the online ones if you don't want this)
-    - Send your data to a local LLM, therefore not leaving your PC.
-- ### davidgnome CAN'T:
-	- Access any files on your PC, without you specifically asking it to.
-	- Run any checks and balances on its output other than those which the providers or creators have put in place.
-- > If you haven't already created an environment variable for your chosen LLM, do so now in your os / the relevant `_backend.py`
-  Example: I use GPT when not in an IDE, so where I have the below in GPT_backend.py:
-  ```
-  # Read the key from the environment
-  API_KEY: str | None = os.getenv("OPENAI_API_KEY")
-  ```
-- Now that's over with, lets get to it.
-- ## Usage:
-- Once you've installed the files via the README, open any terminal.
-- Set the API by choosing between `ollama`, `claude`, `gpt`, `gemini`:
-  ```
-  davidgnome set ollama
-  ```
-- To use davidgnome, we simply type `davidgnome "I have a question about Linux which I will remember to put in double quotes"`
-- press `enter`
-- Here's examples:
-
-- ### Online Models
-- As mentioned, online models will pretty much give the correct answers in the same way as using them in the way 
-  you normally would. This is GPT 3.5
-<br>
-<img src='./src/GnomeGPT3_5'>
-<br>
-- Small Models through Ollama are a bit of a lottery. 
-- Its usueful to have a tiny helper for simple queries, but I wouldn't run anything with `sudo` below 30B personally.
-<br>
-<img src='./src/dgnome2.png'>
-<br>
-- davidgnome will provide an explanation, then offer the options for the command. Results may vary dependant on the model. You may also have to play around with the system prompt for small models.
-- I have tested a much longer prompt template with the small models, and strangely enough they performed far worse with a longer prompt template. This may well be due to the system info and terminal history pushing the context windows limits.
-- If the code is flagged as potentially having risk, or if it is not on the list of risky commands (that I could remember offhand, with little thought), it will be flagged and you need to press 'Y' for 'Yes', or 'N' for 'No'.
-<br>
-<img src='./src/caution.png'>
-<br>
-- You'll also have to type your password in for sudo obviously.
-<br>
-<img src='./src/password.png'>
-<br>
 
 ### Thats it! I've hardly tested it, the code and documentation are poorly laid out, but its fun. 
 ### The main point is that it acts as a scaffold for a much bigger project
